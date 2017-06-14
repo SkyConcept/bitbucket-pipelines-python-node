@@ -63,6 +63,7 @@ RUN apk add --no-cache --virtual .build-deps-yarn gnupg \
   && mv yarn.js /usr/local/bin/yarn \
   && chmod +x /usr/local/bin/yarn \
   && npm install -g webpack \
-  && apk del .build-deps-yarn
+  && apk del .build-deps-yarn \
+  && pip install boto3
 
 CMD [ "node" ]
