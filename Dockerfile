@@ -66,6 +66,7 @@ RUN apk add --no-cache --virtual .build-deps-yarn gnupg \
   && apk del .build-deps-yarn \
   && pip install boto3 \
   && pip install requests \
+  && pip install django==1.11.10 \
   && apk add git
 
 CMD [ "node" ]
